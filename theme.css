@@ -1,7 +1,7 @@
 /* Design tokens */
 :root {
-	--soul-font-ui: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-	--soul-font-text: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+	--soul-font-ui: "SFCompactDisplay", "SFProText", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	--soul-font-text: "SFProText", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	--soul-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 	--soul-radius-s: 4px;
 	--soul-radius-m: 8px;
@@ -15,9 +15,9 @@
 	--soul-space-5: 24px;
 	--soul-space-6: 32px;
 	--soul-bg-0: #0b0b0b;
-	--soul-bg-1: #111213;
-	--soul-bg-2: #161819;
-	--soul-border: #232526;
+	--soul-bg-1: #0e0f10;
+	--soul-bg-2: #121314;
+	--soul-border: #1f2122;
 	--soul-text-1: #e6e6e6;
 	--soul-text-2: #b7b7b7;
 	--soul-text-3: #7a7a7a;
@@ -83,7 +83,7 @@
 
 .theme-dark .workspace-split.mod-left-split,
 .theme-dark .workspace-split.mod-right-split {
-	background-color: var(--soul-bg-1);
+	background-color: var(--soul-bg-0);
 }
 
 .theme-dark .workspace-split.mod-left-split {
@@ -92,6 +92,19 @@
 
 .theme-dark .workspace-split.mod-right-split {
 	border-left: 1px solid var(--soul-border);
+}
+
+.theme-dark .workspace-ribbon.mod-left,
+.theme-dark .workspace-ribbon.mod-right {
+	background-color: var(--soul-bg-0);
+	border-color: var(--soul-border);
+}
+
+.theme-dark .titlebar,
+.theme-dark .workspace-tab-header-container,
+.theme-dark .workspace-tab-header-container-inner {
+	background-color: var(--soul-bg-0);
+	border-bottom: 1px solid var(--soul-border);
 }
 
 .theme-dark .workspace-leaf-resize-handle {
@@ -178,5 +191,5 @@ svg * {
 /* Patch summary
 Variables added: --soul-font-ui, --soul-font-text, --soul-font-mono, --soul-radius-s, --soul-radius-m, --soul-radius-l, --soul-shadow-s, --soul-shadow-m, --soul-space-1, --soul-space-2, --soul-space-3, --soul-space-4, --soul-space-5, --soul-space-6, --soul-bg-0, --soul-bg-1, --soul-bg-2, --soul-border, --soul-text-1, --soul-text-2, --soul-text-3, --soul-select, --soul-select-2
 Obsidian variables mapped: --background-primary, --background-secondary, --background-tertiary, --background-secondary-alt, --text-normal, --text-muted, --text-faint, --divider-color, --divider-width, --divider-width-hover, --background-modifier-border, --modal-border-color, --background-modifier-hover, --background-modifier-active, --background-modifier-active-hover, --background-modifier-form-field, --background-modifier-form-field-highlighted, --nav-item-background-active, --nav-item-background-hover, --text-selection, --interactive-accent, --interactive-accent-hover, --font-text, --font-interface, --font-monospace
-Selectors touched: .theme-dark, .theme-dark .nav-file-title, .theme-dark .nav-folder-title, .theme-dark .nav-file-title.is-active, .theme-dark .nav-folder-title.is-active, .theme-dark .nav-file-title:hover, .theme-dark .nav-folder-title:hover, .theme-dark .workspace-split.mod-left-split, .theme-dark .workspace-split.mod-right-split, .theme-dark .workspace-leaf-resize-handle, .theme-dark .markdown-preview-view, .theme-dark .cm-content, .theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5, .theme-dark h6, .theme-dark .cm-header, .theme-dark .view-header-title, .theme-dark .nav-header, .theme-dark .status-bar, .theme-dark .workspace-tab-header, .theme-dark ::selection, .theme-dark .internal-link, .theme-dark .internal-link:hover
+Selectors touched: .theme-dark, .theme-dark .nav-file-title, .theme-dark .nav-folder-title, .theme-dark .nav-file-title.is-active, .theme-dark .nav-folder-title.is-active, .theme-dark .nav-file-title:hover, .theme-dark .nav-folder-title:hover, .theme-dark .workspace-split.mod-left-split, .theme-dark .workspace-split.mod-right-split, .theme-dark .workspace-ribbon.mod-left, .theme-dark .workspace-ribbon.mod-right, .theme-dark .titlebar, .theme-dark .workspace-tab-header-container, .theme-dark .workspace-tab-header-container-inner, .theme-dark .workspace-leaf-resize-handle, .theme-dark .markdown-preview-view, .theme-dark .cm-content, .theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5, .theme-dark h6, .theme-dark .cm-header, .theme-dark .view-header-title, .theme-dark .nav-header, .theme-dark .status-bar, .theme-dark .workspace-tab-header, .theme-dark ::selection, .theme-dark .internal-link, .theme-dark .internal-link:hover
 */
