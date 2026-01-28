@@ -259,6 +259,15 @@
 	color: var(--soul-text-1);
 }
 
+.theme-light .callout {
+	background-color: #f3f3f3;
+	border-color: transparent;
+}
+
+.theme-light .callout-title {
+	color: #111111;
+}
+
 .theme-dark .modal,
 .theme-dark .modal-container,
 .theme-dark .menu,
