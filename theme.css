@@ -33,11 +33,11 @@
 	--text-normal: var(--soul-text-1);
 	--text-muted: var(--soul-text-2);
 	--text-faint: var(--soul-text-3);
-	--divider-color: var(--soul-border);
-	--divider-width: 1px;
-	--divider-width-hover: 1px;
-	--background-modifier-border: var(--soul-border);
-	--modal-border-color: var(--soul-border);
+	--divider-color: transparent;
+	--divider-width: 0px;
+	--divider-width-hover: 0px;
+	--background-modifier-border: transparent;
+	--modal-border-color: transparent;
 	--background-modifier-hover: var(--soul-select-2);
 	--background-modifier-active: var(--soul-select);
 	--background-modifier-active-hover: var(--soul-select-2);
@@ -51,6 +51,8 @@
 	--font-text: var(--soul-font-text);
 	--font-interface: var(--soul-font-ui);
 	--font-monospace: var(--soul-font-mono);
+	--graph-node-focused: #b59b58;
+	--graph-node-highlight: #b59b58;
 	line-height: 1.6;
 	font-weight: 400;
 	font-family: var(--soul-font-text);
@@ -65,20 +67,25 @@
 	background-clip: padding-box;
 	font-family: var(--soul-font-ui);
 	font-weight: 400;
-	color: var(--soul-text-2);
+	color: var(--soul-text-3);
 }
 
 .theme-dark .nav-file-title.is-active,
 .theme-dark .nav-folder-title.is-active {
 	background-color: var(--soul-select);
-	border-color: var(--soul-border);
 	color: var(--soul-text-1);
 }
 
 .theme-dark .nav-file-title:hover,
 .theme-dark .nav-folder-title:hover {
 	background-color: var(--soul-select-2);
-	color: var(--soul-text-1);
+	color: var(--soul-text-2);
+}
+
+.theme-dark .nav-file-title a,
+.theme-dark .nav-folder-title a {
+	color: inherit;
+	text-decoration: none;
 }
 
 .theme-dark .nav-folder-children,
@@ -102,28 +109,28 @@
 }
 
 .theme-dark .workspace-split.mod-left-split {
-	border-right: 1px solid var(--soul-border);
+	border-right: 0;
 }
 
 .theme-dark .workspace-split.mod-right-split {
-	border-left: 1px solid var(--soul-border);
+	border-left: 0;
 }
 
 .theme-dark .workspace-ribbon.mod-left,
 .theme-dark .workspace-ribbon.mod-right {
 	background-color: var(--soul-bg-0);
-	border-color: var(--soul-border);
+	border-color: transparent;
 }
 
 .theme-dark .titlebar,
 .theme-dark .workspace-tab-header-container,
 .theme-dark .workspace-tab-header-container-inner {
 	background-color: var(--soul-bg-0);
-	border-bottom: 1px solid var(--soul-border);
+	border-bottom: 0;
 }
 
 .theme-dark .workspace-leaf-resize-handle {
-	background-color: var(--soul-border);
+	background-color: transparent;
 }
 
 .theme-dark .markdown-preview-view,
@@ -151,6 +158,10 @@
 .theme-dark .workspace-tab-header {
 	font-family: var(--soul-font-ui);
 	font-weight: 400;
+}
+
+.theme-dark .nav-header {
+	color: var(--soul-text-3);
 }
 
 .theme-dark ::selection {
@@ -193,7 +204,7 @@
 .theme-dark .popover-content,
 .theme-dark .dropdown,
 .theme-dark .dropdown-menu {
-	background-color: #0e0f10e6;
+	background-color: #0b0b0bb3;
 	box-shadow: var(--soul-shadow-m);
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(8px);
@@ -207,7 +218,7 @@
 .theme-light .popover-content,
 .theme-light .dropdown,
 .theme-light .dropdown-menu {
-	background-color: #ffffffde;
+	background-color: #ffffffcc;
 	box-shadow: var(--soul-shadow-m);
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(8px);
@@ -254,6 +265,6 @@ svg * {
 
 /* Patch summary
 Variables added: --soul-font-ui, --soul-font-text, --soul-font-mono, --soul-radius-s, --soul-radius-m, --soul-radius-l, --soul-shadow-s, --soul-shadow-m, --soul-space-1, --soul-space-2, --soul-space-3, --soul-space-4, --soul-space-5, --soul-space-6, --soul-bg-0, --soul-bg-1, --soul-bg-2, --soul-border, --soul-text-1, --soul-text-2, --soul-text-3, --soul-select, --soul-select-2
-Obsidian variables mapped: --background-primary, --background-secondary, --background-tertiary, --background-secondary-alt, --text-normal, --text-muted, --text-faint, --divider-color, --divider-width, --divider-width-hover, --background-modifier-border, --modal-border-color, --background-modifier-hover, --background-modifier-active, --background-modifier-active-hover, --background-modifier-form-field, --background-modifier-form-field-highlighted, --nav-item-background-active, --nav-item-background-hover, --text-selection, --interactive-accent, --interactive-accent-hover, --font-text, --font-interface, --font-monospace
-Selectors touched: .theme-dark, .theme-dark .nav-file-title, .theme-dark .nav-folder-title, .theme-dark .nav-file-title.is-active, .theme-dark .nav-folder-title.is-active, .theme-dark .nav-file-title:hover, .theme-dark .nav-folder-title:hover, .theme-dark .nav-folder-children, .theme-dark .tree-item-children, .theme-dark .tree-item-children .tree-item-children, .theme-dark .tree-item-self, .theme-dark .workspace-split.mod-left-split, .theme-dark .workspace-split.mod-right-split, .theme-dark .workspace-ribbon.mod-left, .theme-dark .workspace-ribbon.mod-right, .theme-dark .titlebar, .theme-dark .workspace-tab-header-container, .theme-dark .workspace-tab-header-container-inner, .theme-dark .workspace-leaf-resize-handle, .theme-dark .markdown-preview-view, .theme-dark .cm-content, .theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5, .theme-dark h6, .theme-dark .cm-header, .theme-dark .view-header-title, .theme-dark .nav-header, .theme-dark .status-bar, .theme-dark .workspace-tab-header, .theme-dark ::selection, .theme-dark .internal-link, .theme-dark .internal-link:hover, .theme-dark .callout, .theme-dark .callout-title, .theme-dark .modal, .theme-dark .modal-container, .theme-dark .menu, .theme-dark .suggestion-container, .theme-dark .popover, .theme-dark .popover-content, .theme-dark .dropdown, .theme-dark .dropdown-menu, .theme-light .modal, .theme-light .modal-container, .theme-light .menu, .theme-light .suggestion-container, .theme-light .popover, .theme-light .popover-content, .theme-light .dropdown, .theme-light .dropdown-menu
+Obsidian variables mapped: --background-primary, --background-secondary, --background-tertiary, --background-secondary-alt, --text-normal, --text-muted, --text-faint, --divider-color, --divider-width, --divider-width-hover, --background-modifier-border, --modal-border-color, --background-modifier-hover, --background-modifier-active, --background-modifier-active-hover, --background-modifier-form-field, --background-modifier-form-field-highlighted, --nav-item-background-active, --nav-item-background-hover, --text-selection, --interactive-accent, --interactive-accent-hover, --font-text, --font-interface, --font-monospace, --graph-node-focused, --graph-node-highlight
+Selectors touched: .theme-dark, .theme-dark .nav-file-title, .theme-dark .nav-folder-title, .theme-dark .nav-file-title.is-active, .theme-dark .nav-folder-title.is-active, .theme-dark .nav-file-title:hover, .theme-dark .nav-folder-title:hover, .theme-dark .nav-file-title a, .theme-dark .nav-folder-title a, .theme-dark .nav-folder-children, .theme-dark .tree-item-children, .theme-dark .tree-item-children .tree-item-children, .theme-dark .tree-item-self, .theme-dark .workspace-split.mod-left-split, .theme-dark .workspace-split.mod-right-split, .theme-dark .workspace-ribbon.mod-left, .theme-dark .workspace-ribbon.mod-right, .theme-dark .titlebar, .theme-dark .workspace-tab-header-container, .theme-dark .workspace-tab-header-container-inner, .theme-dark .workspace-leaf-resize-handle, .theme-dark .markdown-preview-view, .theme-dark .cm-content, .theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5, .theme-dark h6, .theme-dark .cm-header, .theme-dark .view-header-title, .theme-dark .nav-header, .theme-dark .status-bar, .theme-dark .workspace-tab-header, .theme-dark ::selection, .theme-dark .internal-link, .theme-dark .internal-link:hover, .theme-dark .callout, .theme-dark .callout-title, .theme-dark .modal, .theme-dark .modal-container, .theme-dark .menu, .theme-dark .suggestion-container, .theme-dark .popover, .theme-dark .popover-content, .theme-dark .dropdown, .theme-dark .dropdown-menu, .theme-light .modal, .theme-light .modal-container, .theme-light .menu, .theme-light .suggestion-container, .theme-light .popover, .theme-light .popover-content, .theme-light .dropdown, .theme-light .dropdown-menu
 */
