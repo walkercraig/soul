@@ -38,6 +38,8 @@
 	--divider-width-hover: 0px;
 	--background-modifier-border: transparent;
 	--modal-border-color: transparent;
+	--table-border-color: transparent;
+	--table-border-width: 0px;
 	--background-modifier-hover: var(--soul-select-2);
 	--background-modifier-active: var(--soul-select);
 	--background-modifier-active-hover: var(--soul-select-2);
@@ -56,6 +58,16 @@
 	line-height: 1.6;
 	font-weight: 400;
 	font-family: var(--soul-font-text);
+}
+
+.theme-light {
+	--divider-color: transparent;
+	--divider-width: 0px;
+	--divider-width-hover: 0px;
+	--background-modifier-border: transparent;
+	--modal-border-color: transparent;
+	--table-border-color: transparent;
+	--table-border-width: 0px;
 }
 
 .theme-dark .nav-file-title,
@@ -133,6 +145,29 @@
 	background-color: transparent;
 }
 
+.theme-light .workspace-split.mod-left-split {
+	border-right: 0;
+}
+
+.theme-light .workspace-split.mod-right-split {
+	border-left: 0;
+}
+
+.theme-light .workspace-ribbon.mod-left,
+.theme-light .workspace-ribbon.mod-right {
+	border-color: transparent;
+}
+
+.theme-light .titlebar,
+.theme-light .workspace-tab-header-container,
+.theme-light .workspace-tab-header-container-inner {
+	border-bottom: 0;
+}
+
+.theme-light .workspace-leaf-resize-handle {
+	background-color: transparent;
+}
+
 .theme-dark .markdown-preview-view,
 .theme-dark .cm-content {
 	font-family: var(--soul-font-text);
@@ -172,7 +207,13 @@
 .theme-dark .internal-link,
 .theme-dark .external-link,
 .theme-dark .cm-link,
-.theme-dark .tag {
+.theme-dark .cm-url,
+.theme-dark .cm-hmd-internal-link,
+.theme-dark .cm-hmd-external-link,
+.theme-dark .cm-formatting-link,
+.theme-dark .tag,
+.theme-dark .cm-tag,
+.theme-dark .cm-hashtag {
 	color: var(--soul-text-1);
 	text-decoration-line: underline;
 	text-decoration-thickness: 1px;
@@ -183,8 +224,20 @@
 .theme-dark .internal-link:hover,
 .theme-dark .external-link:hover,
 .theme-dark .cm-link:hover,
-.theme-dark .tag:hover {
+.theme-dark .cm-url:hover,
+.theme-dark .cm-hmd-internal-link:hover,
+.theme-dark .cm-hmd-external-link:hover,
+.theme-dark .cm-formatting-link:hover,
+.theme-dark .tag:hover,
+.theme-dark .cm-tag:hover,
+.theme-dark .cm-hashtag:hover {
 	color: var(--soul-text-1);
+}
+
+.theme-dark .tag,
+.theme-dark .cm-tag,
+.theme-dark .cm-hashtag {
+	background-color: transparent;
 }
 
 .theme-dark .callout {
@@ -204,10 +257,10 @@
 .theme-dark .popover-content,
 .theme-dark .dropdown,
 .theme-dark .dropdown-menu {
-	background-color: #0b0b0bb3;
+	background-color: #0b0b0b80;
 	box-shadow: var(--soul-shadow-m);
-	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
 }
 
 .theme-light .modal,
@@ -218,14 +271,31 @@
 .theme-light .popover-content,
 .theme-light .dropdown,
 .theme-light .dropdown-menu {
-	background-color: #ffffffcc;
+	background-color: #ffffff99;
 	box-shadow: var(--soul-shadow-m);
-	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
 }
 
 .theme-light .tag {
 	background-color: transparent;
+}
+
+.theme-light .cm-tag,
+.theme-light .cm-hashtag {
+	background-color: transparent;
+}
+
+.theme-dark .table-view-table,
+.theme-light .table-view-table {
+	border: 0;
+}
+
+.theme-dark .table-view-table th,
+.theme-dark .table-view-table td,
+.theme-light .table-view-table th,
+.theme-light .table-view-table td {
+	border: 0;
 }
 
 body {
@@ -266,5 +336,5 @@ svg * {
 /* Patch summary
 Variables added: --soul-font-ui, --soul-font-text, --soul-font-mono, --soul-radius-s, --soul-radius-m, --soul-radius-l, --soul-shadow-s, --soul-shadow-m, --soul-space-1, --soul-space-2, --soul-space-3, --soul-space-4, --soul-space-5, --soul-space-6, --soul-bg-0, --soul-bg-1, --soul-bg-2, --soul-border, --soul-text-1, --soul-text-2, --soul-text-3, --soul-select, --soul-select-2
 Obsidian variables mapped: --background-primary, --background-secondary, --background-tertiary, --background-secondary-alt, --text-normal, --text-muted, --text-faint, --divider-color, --divider-width, --divider-width-hover, --background-modifier-border, --modal-border-color, --background-modifier-hover, --background-modifier-active, --background-modifier-active-hover, --background-modifier-form-field, --background-modifier-form-field-highlighted, --nav-item-background-active, --nav-item-background-hover, --text-selection, --interactive-accent, --interactive-accent-hover, --font-text, --font-interface, --font-monospace, --graph-node-focused, --graph-node-highlight
-Selectors touched: .theme-dark, .theme-dark .nav-file-title, .theme-dark .nav-folder-title, .theme-dark .nav-file-title.is-active, .theme-dark .nav-folder-title.is-active, .theme-dark .nav-file-title:hover, .theme-dark .nav-folder-title:hover, .theme-dark .nav-file-title a, .theme-dark .nav-folder-title a, .theme-dark .nav-folder-children, .theme-dark .tree-item-children, .theme-dark .tree-item-children .tree-item-children, .theme-dark .tree-item-self, .theme-dark .workspace-split.mod-left-split, .theme-dark .workspace-split.mod-right-split, .theme-dark .workspace-ribbon.mod-left, .theme-dark .workspace-ribbon.mod-right, .theme-dark .titlebar, .theme-dark .workspace-tab-header-container, .theme-dark .workspace-tab-header-container-inner, .theme-dark .workspace-leaf-resize-handle, .theme-dark .markdown-preview-view, .theme-dark .cm-content, .theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5, .theme-dark h6, .theme-dark .cm-header, .theme-dark .view-header-title, .theme-dark .nav-header, .theme-dark .status-bar, .theme-dark .workspace-tab-header, .theme-dark ::selection, .theme-dark .internal-link, .theme-dark .internal-link:hover, .theme-dark .callout, .theme-dark .callout-title, .theme-dark .modal, .theme-dark .modal-container, .theme-dark .menu, .theme-dark .suggestion-container, .theme-dark .popover, .theme-dark .popover-content, .theme-dark .dropdown, .theme-dark .dropdown-menu, .theme-light .modal, .theme-light .modal-container, .theme-light .menu, .theme-light .suggestion-container, .theme-light .popover, .theme-light .popover-content, .theme-light .dropdown, .theme-light .dropdown-menu
+Selectors touched: .theme-dark, .theme-light, .theme-dark .nav-file-title, .theme-dark .nav-folder-title, .theme-dark .nav-file-title.is-active, .theme-dark .nav-folder-title.is-active, .theme-dark .nav-file-title:hover, .theme-dark .nav-folder-title:hover, .theme-dark .nav-file-title a, .theme-dark .nav-folder-title a, .theme-dark .nav-folder-children, .theme-dark .tree-item-children, .theme-dark .tree-item-children .tree-item-children, .theme-dark .tree-item-self, .theme-dark .workspace-split.mod-left-split, .theme-dark .workspace-split.mod-right-split, .theme-dark .workspace-ribbon.mod-left, .theme-dark .workspace-ribbon.mod-right, .theme-dark .titlebar, .theme-dark .workspace-tab-header-container, .theme-dark .workspace-tab-header-container-inner, .theme-dark .workspace-leaf-resize-handle, .theme-light .workspace-split.mod-left-split, .theme-light .workspace-split.mod-right-split, .theme-light .workspace-ribbon.mod-left, .theme-light .workspace-ribbon.mod-right, .theme-light .titlebar, .theme-light .workspace-tab-header-container, .theme-light .workspace-tab-header-container-inner, .theme-light .workspace-leaf-resize-handle, .theme-dark .markdown-preview-view, .theme-dark .cm-content, .theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5, .theme-dark h6, .theme-dark .cm-header, .theme-dark .view-header-title, .theme-dark .nav-header, .theme-dark .status-bar, .theme-dark .workspace-tab-header, .theme-dark ::selection, .theme-dark a, .theme-dark .internal-link, .theme-dark .external-link, .theme-dark .cm-link, .theme-dark .cm-url, .theme-dark .cm-hmd-internal-link, .theme-dark .cm-hmd-external-link, .theme-dark .cm-formatting-link, .theme-dark .tag, .theme-dark .cm-tag, .theme-dark .cm-hashtag, .theme-dark a:hover, .theme-dark .internal-link:hover, .theme-dark .external-link:hover, .theme-dark .cm-link:hover, .theme-dark .cm-url:hover, .theme-dark .cm-hmd-internal-link:hover, .theme-dark .cm-hmd-external-link:hover, .theme-dark .cm-formatting-link:hover, .theme-dark .tag:hover, .theme-dark .cm-tag:hover, .theme-dark .cm-hashtag:hover, .theme-dark .callout, .theme-dark .callout-title, .theme-dark .modal, .theme-dark .modal-container, .theme-dark .menu, .theme-dark .suggestion-container, .theme-dark .popover, .theme-dark .popover-content, .theme-dark .dropdown, .theme-dark .dropdown-menu, .theme-light .modal, .theme-light .modal-container, .theme-light .menu, .theme-light .suggestion-container, .theme-light .popover, .theme-light .popover-content, .theme-light .dropdown, .theme-light .dropdown-menu, .theme-light .tag, .theme-light .cm-tag, .theme-light .cm-hashtag, .theme-dark .table-view-table, .theme-light .table-view-table, .theme-dark .table-view-table th, .theme-dark .table-view-table td, .theme-light .table-view-table th, .theme-light .table-view-table td
 */
