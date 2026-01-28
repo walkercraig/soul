@@ -157,15 +157,23 @@
 	background-color: var(--soul-select);
 }
 
-.theme-dark .internal-link {
-	color: color-mix(in srgb, var(--soul-text-1) 60%, var(--soul-text-2));
+.theme-dark a,
+.theme-dark .internal-link,
+.theme-dark .external-link,
+.theme-dark .cm-link,
+.theme-dark .tag {
+	color: var(--soul-text-1);
+	text-decoration-line: underline;
 	text-decoration-thickness: 1px;
 	text-underline-offset: 2px;
 }
 
-.theme-dark .internal-link:hover {
+.theme-dark a:hover,
+.theme-dark .internal-link:hover,
+.theme-dark .external-link:hover,
+.theme-dark .cm-link:hover,
+.theme-dark .tag:hover {
 	color: var(--soul-text-1);
-	text-decoration-line: underline;
 }
 
 .theme-dark .callout {
@@ -203,6 +211,10 @@
 	box-shadow: var(--soul-shadow-m);
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(8px);
+}
+
+.theme-light .tag {
+	background-color: transparent;
 }
 
 body {
