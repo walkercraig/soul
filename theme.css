@@ -267,7 +267,7 @@
 .theme-dark .popover-content,
 .theme-dark .dropdown,
 .theme-dark .dropdown-menu {
-	background-color: #00000066;
+	background-color: #00000033;
 	box-shadow: var(--soul-shadow-m);
 	backdrop-filter: blur(14px);
 	-webkit-backdrop-filter: blur(14px);
@@ -281,7 +281,7 @@
 .theme-light .popover-content,
 .theme-light .dropdown,
 .theme-light .dropdown-menu {
-	background-color: #ffffff99;
+	background-color: #ffffff4d;
 	box-shadow: var(--soul-shadow-m);
 	backdrop-filter: blur(14px);
 	-webkit-backdrop-filter: blur(14px);
