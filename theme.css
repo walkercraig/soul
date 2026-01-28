@@ -63,6 +63,7 @@
 	border: 1px solid transparent;
 	border-bottom-color: var(--soul-border);
 	border-radius: var(--soul-radius-s);
+	background-clip: padding-box;
 	font-family: var(--soul-font-ui);
 	font-weight: 400;
 	color: var(--soul-text-2);
@@ -79,6 +80,21 @@
 .theme-dark .nav-folder-title:hover {
 	background-color: var(--soul-select-2);
 	color: var(--soul-text-1);
+}
+
+.theme-dark .nav-folder-children,
+.theme-dark .tree-item-children {
+	margin-left: var(--soul-space-2);
+	padding-left: var(--soul-space-2);
+	border-left: 1px solid var(--soul-border);
+}
+
+.theme-dark .tree-item-children .tree-item-children {
+	border-left-color: color-mix(in srgb, var(--soul-border) 70%, transparent);
+}
+
+.theme-dark .tree-item-self {
+	padding-left: var(--soul-space-2);
 }
 
 .theme-dark .workspace-split.mod-left-split,
@@ -153,6 +169,20 @@
 	text-decoration-line: underline;
 }
 
+.theme-dark .modal,
+.theme-dark .modal-container,
+.theme-dark .menu,
+.theme-dark .suggestion-container,
+.theme-dark .popover,
+.theme-dark .popover-content,
+.theme-dark .dropdown,
+.theme-dark .dropdown-menu {
+	background-color: color-mix(in srgb, var(--soul-bg-1) 85%, transparent);
+	box-shadow: var(--soul-shadow-m);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+}
+
 body {
 	--radius-s: 0px;
 	--radius-m: 0px;
@@ -191,5 +221,5 @@ svg * {
 /* Patch summary
 Variables added: --soul-font-ui, --soul-font-text, --soul-font-mono, --soul-radius-s, --soul-radius-m, --soul-radius-l, --soul-shadow-s, --soul-shadow-m, --soul-space-1, --soul-space-2, --soul-space-3, --soul-space-4, --soul-space-5, --soul-space-6, --soul-bg-0, --soul-bg-1, --soul-bg-2, --soul-border, --soul-text-1, --soul-text-2, --soul-text-3, --soul-select, --soul-select-2
 Obsidian variables mapped: --background-primary, --background-secondary, --background-tertiary, --background-secondary-alt, --text-normal, --text-muted, --text-faint, --divider-color, --divider-width, --divider-width-hover, --background-modifier-border, --modal-border-color, --background-modifier-hover, --background-modifier-active, --background-modifier-active-hover, --background-modifier-form-field, --background-modifier-form-field-highlighted, --nav-item-background-active, --nav-item-background-hover, --text-selection, --interactive-accent, --interactive-accent-hover, --font-text, --font-interface, --font-monospace
-Selectors touched: .theme-dark, .theme-dark .nav-file-title, .theme-dark .nav-folder-title, .theme-dark .nav-file-title.is-active, .theme-dark .nav-folder-title.is-active, .theme-dark .nav-file-title:hover, .theme-dark .nav-folder-title:hover, .theme-dark .workspace-split.mod-left-split, .theme-dark .workspace-split.mod-right-split, .theme-dark .workspace-ribbon.mod-left, .theme-dark .workspace-ribbon.mod-right, .theme-dark .titlebar, .theme-dark .workspace-tab-header-container, .theme-dark .workspace-tab-header-container-inner, .theme-dark .workspace-leaf-resize-handle, .theme-dark .markdown-preview-view, .theme-dark .cm-content, .theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5, .theme-dark h6, .theme-dark .cm-header, .theme-dark .view-header-title, .theme-dark .nav-header, .theme-dark .status-bar, .theme-dark .workspace-tab-header, .theme-dark ::selection, .theme-dark .internal-link, .theme-dark .internal-link:hover
+Selectors touched: .theme-dark, .theme-dark .nav-file-title, .theme-dark .nav-folder-title, .theme-dark .nav-file-title.is-active, .theme-dark .nav-folder-title.is-active, .theme-dark .nav-file-title:hover, .theme-dark .nav-folder-title:hover, .theme-dark .nav-folder-children, .theme-dark .tree-item-children, .theme-dark .tree-item-children .tree-item-children, .theme-dark .tree-item-self, .theme-dark .workspace-split.mod-left-split, .theme-dark .workspace-split.mod-right-split, .theme-dark .workspace-ribbon.mod-left, .theme-dark .workspace-ribbon.mod-right, .theme-dark .titlebar, .theme-dark .workspace-tab-header-container, .theme-dark .workspace-tab-header-container-inner, .theme-dark .workspace-leaf-resize-handle, .theme-dark .markdown-preview-view, .theme-dark .cm-content, .theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5, .theme-dark h6, .theme-dark .cm-header, .theme-dark .view-header-title, .theme-dark .nav-header, .theme-dark .status-bar, .theme-dark .workspace-tab-header, .theme-dark ::selection, .theme-dark .internal-link, .theme-dark .internal-link:hover, .theme-dark .modal, .theme-dark .modal-container, .theme-dark .menu, .theme-dark .suggestion-container, .theme-dark .popover, .theme-dark .popover-content, .theme-dark .dropdown, .theme-dark .dropdown-menu
 */
