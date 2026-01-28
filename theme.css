@@ -1,3 +1,145 @@
+/* Design tokens */
+:root {
+	--soul-font-ui: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+	--soul-font-text: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+	--soul-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+	--soul-radius-s: 4px;
+	--soul-radius-m: 8px;
+	--soul-radius-l: 12px;
+	--soul-shadow-s: 0 1px 2px rgba(0, 0, 0, 0.25);
+	--soul-shadow-m: 0 6px 16px rgba(0, 0, 0, 0.35);
+	--soul-space-1: 4px;
+	--soul-space-2: 8px;
+	--soul-space-3: 12px;
+	--soul-space-4: 16px;
+	--soul-space-5: 24px;
+	--soul-space-6: 32px;
+	--soul-bg-0: #0b0b0b;
+	--soul-bg-1: #111213;
+	--soul-bg-2: #161819;
+	--soul-border: #232526;
+	--soul-text-1: #e6e6e6;
+	--soul-text-2: #b7b7b7;
+	--soul-text-3: #7a7a7a;
+	--soul-select: #0f2431;
+	--soul-select-2: #15303f;
+}
+
+.theme-dark {
+	--background-primary: var(--soul-bg-0);
+	--background-secondary: var(--soul-bg-1);
+	--background-tertiary: var(--soul-bg-2);
+	--background-secondary-alt: var(--soul-bg-2);
+	--text-normal: var(--soul-text-1);
+	--text-muted: var(--soul-text-2);
+	--text-faint: var(--soul-text-3);
+	--divider-color: var(--soul-border);
+	--divider-width: 1px;
+	--divider-width-hover: 1px;
+	--background-modifier-border: var(--soul-border);
+	--modal-border-color: var(--soul-border);
+	--background-modifier-hover: var(--soul-select-2);
+	--background-modifier-active: var(--soul-select);
+	--background-modifier-active-hover: var(--soul-select-2);
+	--background-modifier-form-field: var(--soul-bg-1);
+	--background-modifier-form-field-highlighted: var(--soul-bg-2);
+	--nav-item-background-active: var(--soul-select);
+	--nav-item-background-hover: var(--soul-select-2);
+	--text-selection: var(--soul-select);
+	--interactive-accent: hsl(var(--accent-h) var(--accent-s) var(--accent-l));
+	--interactive-accent-hover: hsl(var(--accent-h) var(--accent-s) calc(var(--accent-l) + 6%));
+	--font-text: var(--soul-font-text);
+	--font-interface: var(--soul-font-ui);
+	--font-monospace: var(--soul-font-mono);
+	line-height: 1.6;
+	font-weight: 400;
+	font-family: var(--soul-font-text);
+}
+
+.theme-dark .nav-file-title,
+.theme-dark .nav-folder-title {
+	padding: var(--soul-space-2) var(--soul-space-3);
+	min-height: 30px;
+	border: 1px solid transparent;
+	border-bottom-color: var(--soul-border);
+	border-radius: var(--soul-radius-s);
+	font-family: var(--soul-font-ui);
+	font-weight: 400;
+	color: var(--soul-text-2);
+}
+
+.theme-dark .nav-file-title.is-active,
+.theme-dark .nav-folder-title.is-active {
+	background-color: var(--soul-select);
+	border-color: var(--soul-border);
+	color: var(--soul-text-1);
+}
+
+.theme-dark .nav-file-title:hover,
+.theme-dark .nav-folder-title:hover {
+	background-color: var(--soul-select-2);
+	color: var(--soul-text-1);
+}
+
+.theme-dark .workspace-split.mod-left-split,
+.theme-dark .workspace-split.mod-right-split {
+	background-color: var(--soul-bg-1);
+}
+
+.theme-dark .workspace-split.mod-left-split {
+	border-right: 1px solid var(--soul-border);
+}
+
+.theme-dark .workspace-split.mod-right-split {
+	border-left: 1px solid var(--soul-border);
+}
+
+.theme-dark .workspace-leaf-resize-handle {
+	background-color: var(--soul-border);
+}
+
+.theme-dark .markdown-preview-view,
+.theme-dark .cm-content {
+	font-family: var(--soul-font-text);
+	font-weight: 400;
+	line-height: 1.6;
+}
+
+.theme-dark h1,
+.theme-dark h2,
+.theme-dark h3,
+.theme-dark h4,
+.theme-dark h5,
+.theme-dark h6,
+.theme-dark .cm-header {
+	font-family: var(--soul-font-ui);
+	font-weight: 500;
+	letter-spacing: -0.01em;
+}
+
+.theme-dark .view-header-title,
+.theme-dark .nav-header,
+.theme-dark .status-bar,
+.theme-dark .workspace-tab-header {
+	font-family: var(--soul-font-ui);
+	font-weight: 400;
+}
+
+.theme-dark ::selection {
+	background-color: var(--soul-select);
+}
+
+.theme-dark .internal-link {
+	color: color-mix(in srgb, var(--soul-text-1) 60%, var(--soul-text-2));
+	text-decoration-thickness: 1px;
+	text-underline-offset: 2px;
+}
+
+.theme-dark .internal-link:hover {
+	color: var(--soul-text-1);
+	text-decoration-line: underline;
+}
+
 body {
 	--radius-s: 0px;
 	--radius-m: 0px;
@@ -32,3 +174,9 @@ svg * {
 .menu-separator {
 	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
 }
+
+/* Patch summary
+Variables added: --soul-font-ui, --soul-font-text, --soul-font-mono, --soul-radius-s, --soul-radius-m, --soul-radius-l, --soul-shadow-s, --soul-shadow-m, --soul-space-1, --soul-space-2, --soul-space-3, --soul-space-4, --soul-space-5, --soul-space-6, --soul-bg-0, --soul-bg-1, --soul-bg-2, --soul-border, --soul-text-1, --soul-text-2, --soul-text-3, --soul-select, --soul-select-2
+Obsidian variables mapped: --background-primary, --background-secondary, --background-tertiary, --background-secondary-alt, --text-normal, --text-muted, --text-faint, --divider-color, --divider-width, --divider-width-hover, --background-modifier-border, --modal-border-color, --background-modifier-hover, --background-modifier-active, --background-modifier-active-hover, --background-modifier-form-field, --background-modifier-form-field-highlighted, --nav-item-background-active, --nav-item-background-hover, --text-selection, --interactive-accent, --interactive-accent-hover, --font-text, --font-interface, --font-monospace
+Selectors touched: .theme-dark, .theme-dark .nav-file-title, .theme-dark .nav-folder-title, .theme-dark .nav-file-title.is-active, .theme-dark .nav-folder-title.is-active, .theme-dark .nav-file-title:hover, .theme-dark .nav-folder-title:hover, .theme-dark .workspace-split.mod-left-split, .theme-dark .workspace-split.mod-right-split, .theme-dark .workspace-leaf-resize-handle, .theme-dark .markdown-preview-view, .theme-dark .cm-content, .theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5, .theme-dark h6, .theme-dark .cm-header, .theme-dark .view-header-title, .theme-dark .nav-header, .theme-dark .status-bar, .theme-dark .workspace-tab-header, .theme-dark ::selection, .theme-dark .internal-link, .theme-dark .internal-link:hover
+*/
