@@ -276,7 +276,7 @@
 .theme-dark .popover-content,
 .theme-dark .dropdown,
 .theme-dark .dropdown-menu {
-	background-color: #0000001a;
+	background-color: #0000000d;
 	box-shadow: var(--soul-shadow-m);
 	backdrop-filter: blur(14px);
 	-webkit-backdrop-filter: blur(14px);
@@ -290,10 +290,34 @@
 .theme-light .popover-content,
 .theme-light .dropdown,
 .theme-light .dropdown-menu {
-	background-color: #ffffff1a;
+	background-color: #ffffff0d;
 	box-shadow: var(--soul-shadow-m);
 	backdrop-filter: blur(14px);
 	-webkit-backdrop-filter: blur(14px);
+}
+
+.theme-light .modal .setting-item-control button,
+.theme-light .modal .setting-item-control .setting-item-control-button,
+.theme-light .modal .setting-item-control .clickable-icon {
+	border: 1px solid #e6e6e6;
+	background-color: #fafafa;
+}
+
+.theme-dark .modal .setting-item-control button,
+.theme-dark .modal .setting-item-control .setting-item-control-button,
+.theme-dark .modal .setting-item-control .clickable-icon {
+	border: 1px solid #202020;
+	background-color: #0a0a0a;
+}
+
+.theme-light .modal input[type="range"],
+.theme-light .modal .slider {
+	background-color: #ededed;
+}
+
+.theme-dark .modal input[type="range"],
+.theme-dark .modal .slider {
+	background-color: #1a1a1a;
 }
 
 .theme-light .tag {
