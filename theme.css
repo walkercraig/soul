@@ -301,6 +301,7 @@
 .theme-light .modal .setting-item-control .clickable-icon {
 	border: 1px solid #e6e6e6;
 	background-color: #fafafa;
+	color: #111111;
 }
 
 .theme-dark .modal .setting-item-control button,
