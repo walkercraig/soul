@@ -193,8 +193,43 @@
 .theme-dark h6,
 .theme-dark .cm-header {
 	font-family: var(--soul-font-ui);
-	font-weight: 500;
 	letter-spacing: -0.01em;
+}
+
+.markdown-preview-view h1,
+.markdown-source-view .cm-header-1 {
+	font-size: 1.125em;
+	font-weight: 600;
+}
+
+.markdown-preview-view h2,
+.markdown-source-view .cm-header-2 {
+	font-size: 1em;
+	font-weight: 600;
+}
+
+.markdown-preview-view h3,
+.markdown-source-view .cm-header-3 {
+	font-size: 1em;
+	font-weight: 600;
+}
+
+.markdown-preview-view h4,
+.markdown-source-view .cm-header-4 {
+	font-size: 0.9em;
+	font-weight: 500;
+}
+
+.markdown-preview-view h5,
+.markdown-source-view .cm-header-5 {
+	font-size: 0.85em;
+	font-weight: 500;
+}
+
+.markdown-preview-view h6,
+.markdown-source-view .cm-header-6 {
+	font-size: 0.85em;
+	font-weight: 400;
 }
 
 .theme-dark .view-header-title,
